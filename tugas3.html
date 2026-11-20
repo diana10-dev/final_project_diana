@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reting makanan</title>
+</head>
+<body>
+    <h2>reting makanan</h2>
+
+    <!--fora input reting-->
+
+    <label for="reting">masuk reting</label>
+    <input type="number" id="reting" placeholder="masuk reting">
+    <button onclick="cekReting()"> cek reting</button>
+
+    <!--Tempat menampilkan hasil-->
+    <p id="hasil"></p>
+
+    <script>
+        // funsi untuk mengecek reting dan menampilkan grade
+        function cekReting() {
+            //mengambil reting dari input
+            var reting = document.getElementById("reting").value;
+            var hasil = "";
+
+            //cek condiri reting dan tentukan grade
+            if(reting >=10) {
+                hasil = "reting sangat enak.";
+            } else if(reting >=9) { 
+                hasil = "reting enak.";
+            } else if(reting >=7) {
+                hasil = "reting kurang enak.";
+            } else {
+                hsil ="reting tidak enak.";
+            }
+
+            //menampilkan hasil di elemen dangan menampilkan hasil
+            document.getElementById("hasil").innerHTML = hasil;
+        }
+        </script>
+
+
+</body>
+</html>

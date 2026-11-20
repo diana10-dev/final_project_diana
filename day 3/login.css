@@ -1,0 +1,13 @@
+body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: aqua;
+        }
+            form{
+                border: 1px solid aqua;
+                padding: 20px;
+                border-radius: 10px;
+                background-color: rgb(243, 236, 243);
+            }

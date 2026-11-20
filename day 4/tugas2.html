@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Operator Aritmatika Perbandingan</h2>
+
+    <p id="aritmatika"></p>
+    <p id="perbandingan"></p> 
+
+    <script>
+        //operator aritmatika
+        var a = 100;
+        var b = 2;
+        var hasilAritmatika =  "Hasil Penjumlahn: " + (a + b) + "<br>" +
+                              "Hasil Pengurangan: " + (a - b) + "<br>" +
+                              "Hasil Perkalian: " + (a * b) + "<br>" +
+                              "Hasil Pembagian: " + (a / b) + "<br>" +
+                              "Hasil Sisa Bagi: " + (a % b);
+document.getElementById("aritmatika").innerHTML = hasilAritmatika;
+
+
+var hasilperbandingan = "Apakah a lebih besar dari b? " + (a > b) + "<br>" +
+                       "Apakah a lebih kecil dari b? " + (a < b) + "<br>" +
+                       "Apakah a sama dengan b? " + (a == b) + "<br>" +
+                       "Apakah a tida sama dengan b? " + (a != b) + "<br>" +
+                       "Apakah a lebih besar atau sama dengan b? " +  (a >= b) + "<br>" +
+                       "Apakah a lebih kecil atau sama dengan b?" + (a <= b);
+ document.getElementById("perbandingan").innerHTML = "hasil perbandingan:<br>" + hasilperbandingan;
+ </script>       
+
+</body>
+</html>

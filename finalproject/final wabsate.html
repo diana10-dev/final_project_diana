@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negara Impianku - China</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #e5e8eb;
+            color: #222;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 25px 15px;
+            border-bottom: 4px solid #b22222;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0 0 15px;
+            color: #a31515;
+        }
+
+        header p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        /* NAVBAR */
+        nav {
+            background-color: #292929;
+            padding: 17px 20px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+}
+
+/* Home dan Project di kiri */
+.nav-kiri {
+    display: flex;
+    gap: 25px;
+}
+
+/* Back di kanan */
+.nav-kanan {
+    margin-left: auto;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: aqua;
+}
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* LAYOUT UTAMA */
+        main {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        /* KONTEN KIRI */
+        .konten {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        section h2 {
+            font-size: 27px;
+            margin-top: 0;
+            color: #a31515;
+        }
+
+        section h3 {
+            font-size: 21px;
+            color: #333;
+        }
+
+        section p {
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* GAMBAR */
+        .gambar {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        aside {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        aside h2 {
+            color: #a31515;
+            margin-top: 0;
+            font-size: 25px;
+        }
+
+        aside p {
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        aside ul {
+            padding-left: 20px;
+            line-height: 2;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #292929;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+            margin: 30px;
+            border-radius: 8px;
+        }
+
+        footer h2 {
+            margin-top: 0;
+            font-size: 26px;
+        }
+
+        footer p {
+            margin-bottom: 0;
+        }
+
+        /* RESPONSIVE HP */
+        @media screen and (max-width: 768px) {
+
+            header h1 {
+                font-size: 26px;
+                text-align: center;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 18px;
+                
+            }
+
+            main {
+                grid-template-columns: 1fr;
+                margin: 20px auto;
+                
+            }
+
+            .gambar {
+                height: 220px;
+            }
+
+            footer {
+                margin: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Selamat Datang Di Wabsite </h1>
+        <p>Wabsite Negara yang Ingin Aku Kunjungi</p>
+    </header>
+
+    <!-- NAVIGASI -->
+  <nav>
+    <div class="nav-kiri">
+        <a href="./final tbel.html">Home</a>
+        <a href="./final lampu.html">Project</a>
+    </div>
+
+    <div class="nav-kanan">
+        <a href="./final tbel.html">Back</a>
+    </div>
+</nav>
+
+    <!-- KONTEN UTAMA -->
+    <main>
+
+        <div class="konten">
+
+            <!-- ARTIKEL PERTAMA -->
+            <section id="home">
+                <h2>Selamat Datang di Negara Impianku</h2>
+
+                <p>
+                    Republik Rakyat Tiongkok (RRT), atau yang sering
+                    disebut sebagai China atau Tiongkok, adalah sebuah
+                    negara besar yang terletak di Asia Timur.
+                </p>
+
+                <img src="../image/negara china.png" alt="Pemandangan Negara China" class="gambar">
+
+                <h3>Mengenal Negara China</h3>
+
+                <p>
+                    China memiliki beragam keindahan, mulai dari
+                    lanskap alam yang dramatis, fenomena unik,
+                    hingga situs warisan dunia yang sangat memukau.
+                    Negara ini menjadi salah satu tempat yang ingin
+                    aku kunjungi karena memiliki banyak tempat wisata
+                    menarik dan budaya yang unik.
+                </p>
+            </section>
+
+            <!-- ARTIKEL KEDUA -->
+            <section id="informasi">
+                <h2>Informasi Negara China</h2>
+
+                <h3>Keindahan Alam dan Wisata</h3>
+
+                <p>
+                    China mempunyai banyak tempat wisata terkenal
+                    yang menarik untuk dikunjungi. Salah satunya
+                    adalah Zhangjiajie yang terkenal dengan pilar-pilar
+                    batu pasir raksasa yang menjulang tinggi.
+                </p>
+
+                <img src="../image/negara china.png" alt="Keindahan wisata China" class="gambar">
+
+                <h3>Alasan Ingin Mengunjungi China</h3>
+
+                <p>
+                    Aku ingin mengunjungi China karena ingin melihat
+                    keindahan alamnya, mengenal kebudayaannya,
+                    mencoba makanan khasnya, dan mengunjungi
+                    berbagai tempat bersejarah.
+                </p>
+            </section>
+
+        </div>
+
+        <!-- SIDEBAR KANAN -->
+        <div class="sidebar">
+
+            <aside id="profil">
+                <h2>About Me</h2>
+
+                <img src="../image/negara china.png" alt="Negara impian" class="gambar">
+
+                <p><b>Nama:</b> diana </p>
+                <p><b>Hobi:</b> Belajar dan menjelajahi hal baru</p>
+                <p><b>Negara Impian:</b> China</p>
+            </aside>
+
+            <aside>
+                <h2>Informasi Tambahan</h2>
+
+                <ul>
+                    <li>Terletak di Asia Timur</li>
+                    <li>Ibu kota: Beijing</li>
+                    <li>Mata uang: Yuan</li>
+                    <li>Bahasa utama: Mandarin</li>
+                </ul>
+            </aside>
+
+            <aside id="foto">
+                <h2>Tempat Menarik</h2>
+
+                <p>1. Tembok Besar China</p>
+                <p>2. Zhangjiajie</p>
+                <p>3. Kota Terlarang</p>
+                <p>4. Shanghai</p>
+            </aside>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>Haidar Website</h2>
+        <p>&copy; 2026 Website Tugas Sekolah</p>
+    </footer>
+
+</body>
+
+</html>

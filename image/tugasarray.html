@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="tampilkanArray()">
+    <h1>Contoh Array Di JavaScript</h1>
+    <P id="Pertama"></P>
+    <p id="Kedua"></p>
+    <p id="Hapus"></p>
+    <p id="HapusPertama"></p>
+    <p id="Panjang"></p>
+    <p id="SemuaHewan"></p>
+    <script>
+        function tampilkanArray() {
+            //membuat array sederhana berdasarkan nama - nama hewan 
+            var hewan = ["ayam", "kucing", "jerapah", "gajah", "angsa", "katak", "kambing",
+                "belalang", "kupu-kupu"];
+                // mengakses elemen dari array 
+                document.getElementById("Pertama").innerHTML = "Hewan Pertama: " + hewan[0];
+                document.getElementById("Kedua").innerHTML = "Hewan Kedua: " + hewan[1];
+                // menambahkan hewan baru ke array
+                hewan.push("sapi"); //'push' digunakan untuk menambahkan item
+                // menghapus hewan terakhir dari array menggunakan pop
+                var hewanTerakhir = hewan.pop(); // pop di gunakan untuk menghapus buah terakhir
+                // menghapus buah pertama dari array menggunakan pop
+                var hewanPertama = hewan.shift(); // shifet di gunakan untuk menghapus hewan pertama 
+                // menampilkan hasil setelah menghapus hewan terakhir
+                document.getElementById("Hapus").innerHTML = "Hewan Terakhir Yang Dihapus: " + hewanTerakhir;
+                // menampilkan hasil setelah menghapus hewan pertama 
+                document.getElementById("HapusPertama").innerHTML = "Hewan Pertama Yang Dihapusan: " + hewanPertama;
+                // menampilkan panjang array dan semua elemennya 
+                document.getElementById("Panjang").innerHTML = "Total Hewan Setelah Penghapusan: " + hewan.length;
+                document.getElementById("SemuaHewan").innerHTML = "Semua Hewan: " + hewan.join(", ");
+
+        }
+    </script>
+</body>
+</html>

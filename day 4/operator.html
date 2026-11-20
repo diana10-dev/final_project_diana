@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Operator Aritmatika, Perbandingan, dan Logika</h2>
+
+    <p id="aritmatika"></p>
+    <p id="perbandingan"></p>
+    <p id="logika"></p>
+
+    <script>
+        //operator aritmatika 
+        var a = 10;
+        var b = 3; 
+        var hasilAritmatika = "Hasil Penjumlahn: " + (a + b) + "<br>" +
+                              "Hasil Pengurangan: " + (a - b) + "<br>" +
+                              "Hasil Perkalian: " + (a * b) + "<br>" +
+                              "Hasil Pembagian: " + (a / b) + "<br>" +
+                              "Hasil Sisa Bagi: " + (a % b);
+document.getElementById("aritmatika").innerHTML = hasilAritmatika;
+
+//operator logika dengan penjelas
+var hasilperbandingan = "Apakah a lebih besar dari b? " + (a > b) + "<br>" +
+                       "Apakah a lebih kecil dari b? " + (a < b) + "<br>" +
+                       "Apakah a sama dengan b? " + (a == b) + "<br>" +
+                       "Apakah a tida sama dengan b? " + (a != b) + "<br>" +
+                       "Apakah a lebih besar atau sama dengan b? " +  (a >= b) + "<br>" +
+                       "Apakah a lebih kecil atau sama dengan b?" + (a <= b);
+                       document.getElementById("perbandingan").innerHTML = "hasil perbandingan:<br>" + hasilperbandingan;
+
+                       //operator dengan penjelasan
+                       var hasillogika = "Apakah a lebih besar dari b DAN b lebih kecil dari 10?" + (a > b && b < 10) + "<br>" +
+                                         "Apakah a lebih besar dari b ATAU b lebih besar dari 10?" + (a > b || b >10) + "<br>" +
+                                         "Apakah a TIDAK lebih kecil dari b? " + !(a < b);
+                        document.getElementById("logika").innerHTML = "hasil logika" + hasillogika;
+                    </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontrol 4 Lampu</title>
+    <body>
+        <h1>PROJECT KONTROL LAMPU 💡</h1>
+    </body>
+    
+
+
+    <style>
+        body {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: black;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 650px;
+            margin: 30px auto;
+        }
+
+
+        .card {
+            min-height: 330px;
+            padding: 20px;
+            border-radius: 18px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+        }
+
+        .lampu1 {
+            background-image: url("../image/background2.jpg");
+        }
+
+        .lampu2 {
+            background-image: url("../image/background3.jpg");
+        }
+
+        .lampu3 {
+            background-image: url("../image/background.jpg");
+        }
+
+        .lampu4 {
+            background-image: url("../image/background4.jpg");
+        }
+
+        .card img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        button {
+            background-color: aqua;
+            color: black;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 500px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Kontrol 4 Lampu</h1>
+
+  
+<main>
+
+    <div class="card lampu1">
+        <h2>Lampu 1</h2>
+        <img id="lampu1" src="../image/lampumati.jpg" alt="Lampu mati">
+        <p id="status1">Lampu Mati</p>
+        <p id="timer1"></p>
+        <button id="tombol1" onclick="turnOnLamp(1)">
+            Nyalakan Lampu
+        </button>
+    </div>
+
+    <div class="card lampu2">
+        <h2>Lampu 2</h2>
+        <img id="lampu2" src="../image/lampumati.jpg" alt="Lampu mati">
+        <p id="status2">Lampu Mati</p>
+        <p id="timer2"></p>
+        <button id="tombol2" onclick="turnOnLamp(2)">
+            Nyalakan Lampu
+        </button>
+    </div>
+
+    <div class="card lampu3">
+        <h2>Lampu 3</h2>
+        <img id="lampu3" src="../image/lampumati.jpg" alt="Lampu mati">
+        <p id="status3">Lampu Mati</p>
+        <p id="timer3"></p>
+        <button id="tombol3" onclick="turnOnLamp(3)">
+            Nyalakan Lampu
+        </button>
+    </div>
+
+    <div class="card lampu4">
+        <h2>Lampu 4</h2>
+        <img id="lampu4" src="../image/lampumati.jpg" alt="Lampu mati">
+        <p id="status4">Lampu Mati</p>
+        <p id="timer4"></p>
+        <button id="tombol4" onclick="turnOnLamp(4)">
+            Nyalakan Lampu
+        </button>
+    </div>
+
+</main>
+
+
+    <script>
+        function turnOnLamp(nomor) {
+            let gambar = document.getElementById("lampu" + nomor);
+            let status = document.getElementById("status" + nomor);
+            let timer = document.getElementById("timer" + nomor);
+            let tombol = document.getElementById("tombol" + nomor);
+
+            // Menyalakan lampu
+            gambar.src = "../image/lampuhidup.jpg";
+            status.innerText = "Lampu Menyala";
+            tombol.disabled = true;
+
+            let countdown = 3;
+            timer.innerText = "Timer: " + countdown + " detik";
+
+            let timerInterval = setInterval(function () {
+                countdown--;
+
+                if (countdown > 0) {
+                    timer.innerText = "Timer: " + countdown + " detik";
+                } else {
+                    clearInterval(timerInterval);
+
+                    // Mematikan lampu otomatis
+                    gambar.src = "../image/lampumati.jpg";
+                    status.innerText = "Lampu Mati";
+                    timer.innerText = "";
+                    tombol.disabled = false;
+                }
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>

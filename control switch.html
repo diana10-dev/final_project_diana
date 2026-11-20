@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>pilih hari berdasarkan nomor</h2>
+    <!--form input untuk nomor hari-->
+    <label for="hari">masukkan nomor hari</label>
+    <input type="hari" id="hari" placeholder="masukan nomor hari">
+    <button onclick="cekHari ()">cek hari</button>
+    <!--tempat menampilkan hasil-->
+    </body>
+    <p id="hasilhari"></p>
+    <script>
+        // fungsi untuk mengecek hari berdasarkan nomoryang dimasukkan
+        function cekHari(){
+            //mengambil nilai dari input
+            var nomorHari = parseInt(document.getElementById("hari").value);
+            var hasil ="";
+
+            // menggunakan struktur switch untuk menentukan hari
+            switch (nomorHari) {
+                case 1:
+                    hasil = "hari ini adalah senin.";
+                    break;
+                case 2: 
+                    hasil = "Hari ini adalah selasa.";
+                    break;
+                case 3: 
+                    hasil = "Hari ini adalah rabu.";
+                    break;
+                case 4: 
+                    hasil = "Hari ini adalah kamis.";
+                    break;
+                case 5:
+                    hasil = "Hari ini adalah jumat.";
+                    break;
+                case 6: 
+                    hasil = "Hari ini adalah sabtu.";
+                    break;
+                case 7: 
+                    hasil = "Hari ini adalah minggu.";
+                    break;
+                default:
+                    hasil = "Nomor hari tidak valid. MasukKan angka antara 1 dan 7";
+
+            }
+            //menampilkan hasil di elemen dengan id 'hasilHari'
+            document.getElementById("hasilhari").innerHTML = hasil;
+        }    
+    </script>
+
+</body>
+</html>
